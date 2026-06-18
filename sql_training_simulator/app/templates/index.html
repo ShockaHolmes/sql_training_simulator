@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SQL Quest Academy</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Python + SQLite Interactive Simulator</p>
+      <h1>SQL Quest Academy</h1>
+      <p>Learn SQL by completing real database missions, running queries, fixing errors, and earning badges.</p>
+    </div>
+    <div class="stats">
+      <strong id="completed-count">{{ progress.completed|length }}</strong><span>/100 lessons</span>
+      <strong id="xp-count">{{ progress.xp }}</strong><span>XP</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <h2>Mixed Lesson Path</h2>
+      <p class="small">Every page load shuffles the path for a new training mix.</p>
+      <div class="lesson-list" id="lesson-list">
+        {% for lesson in lessons %}
+        <button class="lesson-card {% if lesson.id in progress.completed %}done{% endif %}" data-lesson='{{ lesson|tojson }}'>
+          <span class="level {{ lesson.level }}">{{ lesson.level }}</span>
+          <strong>{{ lesson.id }}. {{ lesson.title }}</strong>
+          <small>{{ lesson.topic }}</small>
+        </button>
+        {% endfor %}
+      </div>
+    </aside>
+
+    <section class="workspace">
+      <article class="panel lesson-panel">
+        <div class="panel-head">
+          <div>
+            <span id="lesson-level" class="level beginner">beginner</span>
+            <h2 id="lesson-title">Choose a lesson</h2>
+          </div>
+          <button id="audio-btn" class="ghost">Read Lesson Aloud</button>
+        </div>
+        <p id="lesson-story">Pick a lesson from the left to begin your SQL mission.</p>
+        <h3>Goal</h3>
+        <p id="lesson-goal">Run SQL in the test environment and check your answer.</p>
+        <h3>Step-by-step instructions</h3>
+        <ol id="lesson-steps"></ol>
+        <details>
+          <summary>Hint</summary>
+          <p id="lesson-hint"></p>
+        </details>
+        <audio id="lesson-audio" controls hidden></audio>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <h2>SQL Test Environment</h2>
+          <button id="reset-db" class="ghost">Reset Database</button>
+        </div>
+        <textarea id="sql-input" spellcheck="false">SELECT * FROM customers;</textarea>
+        <div class="actions">
+          <button id="run-btn">Run Query</button>
+          <button id="check-btn">Check Lesson</button>
+        </div>
+        <div id="feedback" class="feedback"></div>
+        <div class="table-wrap"><table id="result-table"></table></div>
+      </article>
+    </section>
+
+    <aside class="rightbar">
+      <section class="panel">
+        <h2>Badges</h2>
+        <div id="badges" class="badges">
+          {% for badge in badges %}
+          <div class="badge {% if badge.earned %}earned{% endif %}">
+            <span>🏅</span>
+            <strong>{{ badge.name }}</strong>
+            <small>{{ badge.description }}</small>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section class="panel schema">
+        <h2>Database Schema</h2>
+        {% for table, columns in schema.items() %}
+        <details>
+          <summary>{{ table }}</summary>
+          <ul>
+            {% for column in columns %}<li>{{ column }}</li>{% endfor %}
+          </ul>
+        </details>
+        {% endfor %}
+      </section>
+    </aside>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

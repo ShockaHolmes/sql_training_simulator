@@ -1,0 +1,2195 @@
+[
+  {
+    "id": 1,
+    "title": "See every customer",
+    "level": "beginner",
+    "topic": "SELECT",
+    "story": "Your first mission is to inspect the customer table.",
+    "goal": "Return all columns from customers.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM customers;",
+    "requires": [
+      "select",
+      "from",
+      "customers"
+    ],
+    "hint": "Use SELECT * when you need every column.",
+    "min_rows": 1
+  },
+  {
+    "id": 2,
+    "title": "Choose specific columns",
+    "level": "beginner",
+    "topic": "SELECT",
+    "story": "Real analysts avoid pulling columns they do not need.",
+    "goal": "Return first_name, last_name, and city from customers.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT first_name, last_name FROM customers;",
+    "requires": [
+      "first_name",
+      "last_name",
+      "city",
+      "from customers"
+    ],
+    "hint": "List columns after SELECT separated by commas.",
+    "min_rows": 1
+  },
+  {
+    "id": 3,
+    "title": "Filter one state",
+    "level": "beginner",
+    "topic": "WHERE",
+    "story": "The team wants to focus on Delaware customers.",
+    "goal": "Show customers where state is DE.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM customers WHERE state = 'DE';",
+    "requires": [
+      "where",
+      "state",
+      "'DE'"
+    ],
+    "hint": "Text values need quotes.",
+    "min_rows": 1
+  },
+  {
+    "id": 4,
+    "title": "Filter by city",
+    "level": "beginner",
+    "topic": "WHERE",
+    "story": "A local Bear outreach event needs nearby customers.",
+    "goal": "Show customers from Bear.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM customers WHERE city = 'Bear';",
+    "requires": [
+      "where",
+      "city",
+      "'Bear'"
+    ],
+    "hint": "Use WHERE city = 'Bear'.",
+    "min_rows": 1
+  },
+  {
+    "id": 5,
+    "title": "Sort alphabetically",
+    "level": "beginner",
+    "topic": "ORDER BY",
+    "story": "Organize a contact list for easy reading.",
+    "goal": "Show customers ordered by last_name.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT first_name, last_name FROM customers ORDER BY last_name;",
+    "requires": [
+      "order by",
+      "last_name"
+    ],
+    "hint": "ORDER BY goes near the end.",
+    "min_rows": 1
+  },
+  {
+    "id": 6,
+    "title": "Sort highest price",
+    "level": "beginner",
+    "topic": "ORDER BY",
+    "story": "Find the most expensive products first.",
+    "goal": "Show products ordered by price descending.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM products ORDER BY price DESC;",
+    "requires": [
+      "order by",
+      "price",
+      "desc"
+    ],
+    "hint": "DESC means descending.",
+    "min_rows": 1
+  },
+  {
+    "id": 7,
+    "title": "Limit results",
+    "level": "beginner",
+    "topic": "LIMIT",
+    "story": "A dashboard card only has room for a few rows.",
+    "goal": "Return only 3 products.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM products LIMIT 3;",
+    "requires": [
+      "limit",
+      "3"
+    ],
+    "hint": "LIMIT controls how many rows come back.",
+    "min_rows": 1
+  },
+  {
+    "id": 8,
+    "title": "Use greater than",
+    "level": "beginner",
+    "topic": "WHERE",
+    "story": "Find customers with strong engagement.",
+    "goal": "Show customers with loyalty_points greater than 100.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM customers WHERE loyalty_points > 100;",
+    "requires": [
+      "where",
+      "loyalty_points",
+      ">"
+    ],
+    "hint": "Numbers do not need quotes.",
+    "min_rows": 1
+  },
+  {
+    "id": 9,
+    "title": "Use less than",
+    "level": "beginner",
+    "topic": "WHERE",
+    "story": "Find low stock products for restocking.",
+    "goal": "Show products with stock less than 30.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM products WHERE stock < 30;",
+    "requires": [
+      "where",
+      "stock",
+      "<"
+    ],
+    "hint": "Use < to find values below a number.",
+    "min_rows": 1
+  },
+  {
+    "id": 10,
+    "title": "Find a range",
+    "level": "beginner",
+    "topic": "BETWEEN",
+    "story": "Find mid-priced learning materials.",
+    "goal": "Show products with price between 10 and 100.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM products WHERE price BETWEEN 10 AND 100;",
+    "requires": [
+      "between",
+      "and"
+    ],
+    "hint": "BETWEEN includes both endpoints.",
+    "min_rows": 1
+  },
+  {
+    "id": 11,
+    "title": "Match multiple states",
+    "level": "beginner",
+    "topic": "IN",
+    "story": "Marketing wants customers from DE or PA.",
+    "goal": "Show customers whose state is DE or PA.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM customers WHERE state IN ('DE','PA');",
+    "requires": [
+      "in",
+      "'DE'",
+      "'PA'"
+    ],
+    "hint": "IN is cleaner than many OR clauses.",
+    "min_rows": 1
+  },
+  {
+    "id": 12,
+    "title": "Use LIKE",
+    "level": "beginner",
+    "topic": "LIKE",
+    "story": "Find products with SQL in the name.",
+    "goal": "Show products whose product_name contains SQL.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM products WHERE product_name LIKE '%SQL%';",
+    "requires": [
+      "like",
+      "%SQL%"
+    ],
+    "hint": "Percent signs are wildcards.",
+    "min_rows": 1
+  },
+  {
+    "id": 13,
+    "title": "Create an alias",
+    "level": "beginner",
+    "topic": "AS",
+    "story": "Reports should have friendly column names.",
+    "goal": "Show product_name as item and price as cost.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT product_name AS item, price AS cost FROM products;",
+    "requires": [
+      " as ",
+      "item",
+      "cost"
+    ],
+    "hint": "AS renames output columns.",
+    "min_rows": 1
+  },
+  {
+    "id": 14,
+    "title": "Calculate line values",
+    "level": "beginner",
+    "topic": "Expressions",
+    "story": "Revenue needs quantity times price later; practice multiplication.",
+    "goal": "Show product_name and price * stock as inventory_value.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT product_name, price * stock AS inventory_value FROM products;",
+    "requires": [
+      "*",
+      " as ",
+      "inventory_value"
+    ],
+    "hint": "SQL can calculate values in SELECT.",
+    "min_rows": 1
+  },
+  {
+    "id": 15,
+    "title": "Distinct categories",
+    "level": "beginner",
+    "topic": "DISTINCT",
+    "story": "Build a clean category list.",
+    "goal": "Show each product category once.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT DISTINCT category FROM products;",
+    "requires": [
+      "distinct",
+      "category"
+    ],
+    "hint": "DISTINCT removes duplicate output rows.",
+    "min_rows": 1
+  },
+  {
+    "id": 16,
+    "title": "Count rows",
+    "level": "beginner",
+    "topic": "COUNT",
+    "story": "Leadership asks how many customers exist.",
+    "goal": "Return the total number of customers.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT COUNT(*) AS total_customers FROM customers;",
+    "requires": [
+      "count",
+      "from customers"
+    ],
+    "hint": "COUNT(*) counts rows.",
+    "min_rows": 1
+  },
+  {
+    "id": 17,
+    "title": "Average price",
+    "level": "beginner",
+    "topic": "AVG",
+    "story": "Estimate the average product price.",
+    "goal": "Return average product price.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT AVG(price) AS average_price FROM products;",
+    "requires": [
+      "avg",
+      "price"
+    ],
+    "hint": "AVG works on numeric columns.",
+    "min_rows": 1
+  },
+  {
+    "id": 18,
+    "title": "Minimum price",
+    "level": "beginner",
+    "topic": "MIN",
+    "story": "Find the cheapest item.",
+    "goal": "Return the minimum product price.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT MIN(price) AS cheapest FROM products;",
+    "requires": [
+      "min",
+      "price"
+    ],
+    "hint": "MIN returns the smallest value.",
+    "min_rows": 1
+  },
+  {
+    "id": 19,
+    "title": "Maximum price",
+    "level": "beginner",
+    "topic": "MAX",
+    "story": "Find the premium item.",
+    "goal": "Return the maximum product price.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT MAX(price) AS highest_price FROM products;",
+    "requires": [
+      "max",
+      "price"
+    ],
+    "hint": "MAX returns the largest value.",
+    "min_rows": 1
+  },
+  {
+    "id": 20,
+    "title": "Sum stock",
+    "level": "beginner",
+    "topic": "SUM",
+    "story": "Inventory needs a total stock count.",
+    "goal": "Return total product stock.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT SUM(stock) AS total_stock FROM products;",
+    "requires": [
+      "sum",
+      "stock"
+    ],
+    "hint": "SUM adds numeric values.",
+    "min_rows": 1
+  },
+  {
+    "id": 21,
+    "title": "Group by category",
+    "level": "beginner",
+    "topic": "GROUP BY",
+    "story": "Inventory should be summarized by category.",
+    "goal": "Count products in each category.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT category, COUNT(*) AS product_count FROM products GROUP BY category;",
+    "requires": [
+      "group by",
+      "category",
+      "count"
+    ],
+    "hint": "Every non-aggregate selected column should be grouped.",
+    "min_rows": 1
+  },
+  {
+    "id": 22,
+    "title": "Filter grouped results",
+    "level": "beginner",
+    "topic": "HAVING",
+    "story": "Show only categories with multiple products.",
+    "goal": "Count products by category and keep categories with count greater than 1.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT category, COUNT(*) AS product_count FROM products GROUP BY category HAVING COUNT(*) > 1;",
+    "requires": [
+      "group by",
+      "having",
+      "count"
+    ],
+    "hint": "HAVING filters grouped results.",
+    "min_rows": 1
+  },
+  {
+    "id": 23,
+    "title": "Combine filters",
+    "level": "beginner",
+    "topic": "AND",
+    "story": "Find Delaware customers with high points.",
+    "goal": "Show DE customers with loyalty_points above 100.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM customers WHERE state = 'DE' AND loyalty_points > 100;",
+    "requires": [
+      "where",
+      "and",
+      "loyalty_points"
+    ],
+    "hint": "AND means both conditions must be true.",
+    "min_rows": 1
+  },
+  {
+    "id": 24,
+    "title": "Either condition",
+    "level": "beginner",
+    "topic": "OR",
+    "story": "Find customers in Bear or Dover.",
+    "goal": "Show customers where city is Bear or Dover.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM customers WHERE city = 'Bear' OR city = 'Dover';",
+    "requires": [
+      "where",
+      " or "
+    ],
+    "hint": "OR means either condition may be true.",
+    "min_rows": 1
+  },
+  {
+    "id": 25,
+    "title": "Not cancelled",
+    "level": "beginner",
+    "topic": "NOT",
+    "story": "Reports should ignore cancelled orders.",
+    "goal": "Show orders that are not cancelled.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM orders WHERE NOT status = 'cancelled';",
+    "requires": [
+      "not",
+      "status"
+    ],
+    "hint": "You can also use status <> 'cancelled'.",
+    "min_rows": 1
+  },
+  {
+    "id": 26,
+    "title": "Date filter",
+    "level": "beginner",
+    "topic": "Dates",
+    "story": "Review orders after May 10.",
+    "goal": "Show orders after 2025-05-10.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM orders WHERE order_date > '2025-05-10';",
+    "requires": [
+      "where",
+      "order_date",
+      ">"
+    ],
+    "hint": "SQLite compares ISO date text well.",
+    "min_rows": 1
+  },
+  {
+    "id": 27,
+    "title": "Order statuses",
+    "level": "beginner",
+    "topic": "GROUP BY",
+    "story": "Operations wants to know order status counts.",
+    "goal": "Count orders by status.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT status, COUNT(*) AS total FROM orders GROUP BY status;",
+    "requires": [
+      "status",
+      "count",
+      "group by"
+    ],
+    "hint": "Group by status to get one row per status.",
+    "min_rows": 1
+  },
+  {
+    "id": 28,
+    "title": "Ticket priorities",
+    "level": "beginner",
+    "topic": "GROUP BY",
+    "story": "Support wants priority counts.",
+    "goal": "Count tickets by priority.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT priority, COUNT(*) AS total FROM tickets GROUP BY priority;",
+    "requires": [
+      "priority",
+      "count",
+      "group by"
+    ],
+    "hint": "COUNT with GROUP BY builds a summary.",
+    "min_rows": 1
+  },
+  {
+    "id": 29,
+    "title": "Open tickets",
+    "level": "beginner",
+    "topic": "WHERE",
+    "story": "Support needs unresolved tickets.",
+    "goal": "Show tickets where status is open.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM tickets WHERE status = 'open';",
+    "requires": [
+      "where",
+      "status",
+      "open"
+    ],
+    "hint": "Text value open must be quoted.",
+    "min_rows": 1
+  },
+  {
+    "id": 30,
+    "title": "Completed enrollments",
+    "level": "beginner",
+    "topic": "WHERE",
+    "story": "Education team needs completed course records.",
+    "goal": "Show enrollments where completed equals 1.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM enrollments WHERE completed = 1;",
+    "requires": [
+      "where",
+      "completed",
+      "1"
+    ],
+    "hint": "SQLite uses 1 for true in this seed data.",
+    "min_rows": 1
+  },
+  {
+    "id": 31,
+    "title": "Scores above 90",
+    "level": "beginner",
+    "topic": "WHERE",
+    "story": "Find strong student performances.",
+    "goal": "Show enrollments with score greater than 90.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM enrollments WHERE score > 90;",
+    "requires": [
+      "where",
+      "score",
+      ">"
+    ],
+    "hint": "Use numeric comparison.",
+    "min_rows": 1
+  },
+  {
+    "id": 32,
+    "title": "Course difficulty",
+    "level": "beginner",
+    "topic": "WHERE",
+    "story": "Find beginner courses.",
+    "goal": "Show beginner courses.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM courses WHERE difficulty = 'beginner';",
+    "requires": [
+      "where",
+      "difficulty",
+      "beginner"
+    ],
+    "hint": "Use the courses table.",
+    "min_rows": 1
+  },
+  {
+    "id": 33,
+    "title": "Department list",
+    "level": "beginner",
+    "topic": "SELECT",
+    "story": "Explore internal teams.",
+    "goal": "Show all departments.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM departments;",
+    "requires": [
+      "select",
+      "from departments"
+    ],
+    "hint": "Start with SELECT * FROM departments.",
+    "min_rows": 1
+  },
+  {
+    "id": 34,
+    "title": "Employee salary filter",
+    "level": "beginner",
+    "topic": "WHERE",
+    "story": "Find employees above a salary threshold.",
+    "goal": "Show employees with salary above 110000.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM employees WHERE salary > 110000;",
+    "requires": [
+      "where",
+      "salary",
+      ">"
+    ],
+    "hint": "Salary is numeric.",
+    "min_rows": 1
+  },
+  {
+    "id": 35,
+    "title": "Project budgets",
+    "level": "beginner",
+    "topic": "ORDER BY",
+    "story": "See biggest projects first.",
+    "goal": "Show projects ordered by budget descending.",
+    "steps": [
+      "Read the goal carefully.",
+      "Run the starter SQL.",
+      "Edit the query to match the goal.",
+      "Use Check Lesson when the result looks right."
+    ],
+    "starter_sql": "SELECT * FROM projects ORDER BY budget DESC;",
+    "requires": [
+      "order by",
+      "budget",
+      "desc"
+    ],
+    "hint": "ORDER BY budget DESC.",
+    "min_rows": 1
+  },
+  {
+    "id": 36,
+    "title": "Join customers to orders",
+    "level": "intermediate",
+    "topic": "JOIN",
+    "story": "Orders only show customer IDs, so connect names to orders.",
+    "goal": "Show order_id, first_name, last_name, and status.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT orders.order_id, customers.first_name, customers.last_name, orders.status FROM orders JOIN customers ON orders.customer_id = customers.customer_id;",
+    "requires": [
+      "join",
+      " on ",
+      "customers",
+      "orders"
+    ],
+    "hint": "JOIN needs ON to explain how tables connect.",
+    "min_rows": 1
+  },
+  {
+    "id": 37,
+    "title": "Join orders to items",
+    "level": "intermediate",
+    "topic": "JOIN",
+    "story": "Order details live in another table.",
+    "goal": "Show order_id, product_id, and quantity from joined orders and order_items.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT orders.order_id, order_items.product_id, order_items.quantity FROM orders JOIN order_items ON orders.order_id = order_items.order_id;",
+    "requires": [
+      "join",
+      "order_items",
+      " on "
+    ],
+    "hint": "orders.order_id matches order_items.order_id.",
+    "min_rows": 1
+  },
+  {
+    "id": 38,
+    "title": "Join items to products",
+    "level": "intermediate",
+    "topic": "JOIN",
+    "story": "Product IDs need readable product names.",
+    "goal": "Show product_name and quantity for order items.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT products.product_name, order_items.quantity FROM order_items JOIN products ON order_items.product_id = products.product_id;",
+    "requires": [
+      "join",
+      "products",
+      "product_name"
+    ],
+    "hint": "Join on product_id.",
+    "min_rows": 1
+  },
+  {
+    "id": 39,
+    "title": "Three table revenue",
+    "level": "intermediate",
+    "topic": "JOIN",
+    "story": "Revenue needs order, item, and product data.",
+    "goal": "Show order_id and line total using quantity * price.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT orders.order_id, products.product_name, order_items.quantity * products.price AS line_total FROM orders JOIN order_items ON orders.order_id = order_items.order_id JOIN products ON order_items.product_id = products.product_id;",
+    "requires": [
+      "join",
+      "products",
+      "quantity",
+      "price",
+      "line_total"
+    ],
+    "hint": "Use two joins.",
+    "min_rows": 1
+  },
+  {
+    "id": 40,
+    "title": "Revenue by order",
+    "level": "intermediate",
+    "topic": "GROUP BY",
+    "story": "Summarize every order total.",
+    "goal": "Return each order_id and total revenue.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT orders.order_id, SUM(order_items.quantity * products.price) AS order_total FROM orders JOIN order_items ON orders.order_id = order_items.order_id JOIN products ON order_items.product_id = products.product_id GROUP BY orders.order_id;",
+    "requires": [
+      "sum",
+      "group by",
+      "join"
+    ],
+    "hint": "Aggregate line totals by order.",
+    "min_rows": 1
+  },
+  {
+    "id": 41,
+    "title": "Revenue by customer",
+    "level": "intermediate",
+    "topic": "GROUP BY",
+    "story": "Leadership wants customer revenue.",
+    "goal": "Return customer names and total revenue.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT customers.first_name, customers.last_name, SUM(order_items.quantity * products.price) AS revenue FROM customers JOIN orders ON customers.customer_id = orders.customer_id JOIN order_items ON orders.order_id = order_items.order_id JOIN products ON order_items.product_id = products.product_id GROUP BY customers.customer_id;",
+    "requires": [
+      "customers",
+      "sum",
+      "group by",
+      "join"
+    ],
+    "hint": "Group by the customer id.",
+    "min_rows": 1
+  },
+  {
+    "id": 42,
+    "title": "Left join customers",
+    "level": "intermediate",
+    "topic": "LEFT JOIN",
+    "story": "Some customers may have no orders.",
+    "goal": "Show all customers and their order_id when present.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT customers.first_name, customers.last_name, orders.order_id FROM customers LEFT JOIN orders ON customers.customer_id = orders.customer_id;",
+    "requires": [
+      "left join",
+      "orders",
+      "customers"
+    ],
+    "hint": "LEFT JOIN keeps the left table rows.",
+    "min_rows": 1
+  },
+  {
+    "id": 43,
+    "title": "Customers without orders",
+    "level": "intermediate",
+    "topic": "LEFT JOIN NULL",
+    "story": "Find customers who have not ordered yet.",
+    "goal": "Show customers with no matching orders.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT customers.* FROM customers LEFT JOIN orders ON customers.customer_id = orders.customer_id WHERE orders.order_id IS NULL;",
+    "requires": [
+      "left join",
+      "is null"
+    ],
+    "hint": "After a LEFT JOIN, unmatched right-side values are NULL.",
+    "min_rows": 1
+  },
+  {
+    "id": 44,
+    "title": "Department employees",
+    "level": "intermediate",
+    "topic": "JOIN",
+    "story": "Employee department names live in another table.",
+    "goal": "Show employee names with department_name.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT employees.first_name, employees.last_name, departments.department_name FROM employees JOIN departments ON employees.department_id = departments.department_id;",
+    "requires": [
+      "join",
+      "departments",
+      "department_name"
+    ],
+    "hint": "Join employees.department_id to departments.department_id.",
+    "min_rows": 1
+  },
+  {
+    "id": 45,
+    "title": "Average salary by department",
+    "level": "intermediate",
+    "topic": "GROUP BY",
+    "story": "Compare salary averages across teams.",
+    "goal": "Return department_name and average salary.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT departments.department_name, AVG(employees.salary) AS avg_salary FROM departments JOIN employees ON departments.department_id = employees.department_id GROUP BY departments.department_id;",
+    "requires": [
+      "avg",
+      "group by",
+      "join"
+    ],
+    "hint": "Group by department.",
+    "min_rows": 1
+  },
+  {
+    "id": 46,
+    "title": "High average salary",
+    "level": "intermediate",
+    "topic": "HAVING",
+    "story": "Find departments above a salary average.",
+    "goal": "Return departments with average salary above 110000.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT departments.department_name, AVG(employees.salary) AS avg_salary FROM departments JOIN employees ON departments.department_id = employees.department_id GROUP BY departments.department_id HAVING AVG(employees.salary) > 110000;",
+    "requires": [
+      "having",
+      "avg",
+      "group by"
+    ],
+    "hint": "Use HAVING for aggregate filters.",
+    "min_rows": 1
+  },
+  {
+    "id": 47,
+    "title": "Self join managers",
+    "level": "intermediate",
+    "topic": "SELF JOIN",
+    "story": "Managers are employees too.",
+    "goal": "Show employee name and manager first name.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT e.first_name AS employee, m.first_name AS manager FROM employees e LEFT JOIN employees m ON e.manager_id = m.employee_id;",
+    "requires": [
+      "employees e",
+      "employees m",
+      "left join",
+      "manager"
+    ],
+    "hint": "Use aliases to join employees to itself.",
+    "min_rows": 1
+  },
+  {
+    "id": 48,
+    "title": "Project department budgets",
+    "level": "intermediate",
+    "topic": "JOIN",
+    "story": "Projects belong to departments.",
+    "goal": "Show project_name, department_name, and budget.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT projects.project_name, departments.department_name, projects.budget FROM projects JOIN departments ON projects.department_id = departments.department_id;",
+    "requires": [
+      "join",
+      "projects",
+      "departments"
+    ],
+    "hint": "Join on department_id.",
+    "min_rows": 1
+  },
+  {
+    "id": 49,
+    "title": "Open projects",
+    "level": "intermediate",
+    "topic": "IS NULL",
+    "story": "Some projects have no end date yet.",
+    "goal": "Show projects where end_date is NULL.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT * FROM projects WHERE end_date IS NULL;",
+    "requires": [
+      "is null",
+      "end_date"
+    ],
+    "hint": "Use IS NULL instead of = NULL.",
+    "min_rows": 1
+  },
+  {
+    "id": 50,
+    "title": "Closed ticket duration",
+    "level": "intermediate",
+    "topic": "Expressions",
+    "story": "Support wants days open for closed tickets.",
+    "goal": "Show ticket_id and julianday(closed_date)-julianday(opened_date) as days_open for closed tickets.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT ticket_id, julianday(closed_date) - julianday(opened_date) AS days_open FROM tickets WHERE closed_date IS NOT NULL;",
+    "requires": [
+      "julianday",
+      "closed_date",
+      "opened_date",
+      "is not null"
+    ],
+    "hint": "SQLite can calculate date differences with julianday.",
+    "min_rows": 1
+  },
+  {
+    "id": 51,
+    "title": "Case statement priority",
+    "level": "intermediate",
+    "topic": "CASE",
+    "story": "Convert priority words into risk scores.",
+    "goal": "Return ticket_id and a numeric priority_score using CASE.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT ticket_id, CASE priority WHEN 'critical' THEN 4 WHEN 'high' THEN 3 WHEN 'medium' THEN 2 ELSE 1 END AS priority_score FROM tickets;",
+    "requires": [
+      "case",
+      "when",
+      "then",
+      "end"
+    ],
+    "hint": "CASE creates conditional output.",
+    "min_rows": 1
+  },
+  {
+    "id": 52,
+    "title": "Customer tiers",
+    "level": "intermediate",
+    "topic": "CASE",
+    "story": "Create loyalty segments.",
+    "goal": "Return customer names and tier based on loyalty_points.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT first_name, last_name, CASE WHEN loyalty_points >= 200 THEN 'gold' WHEN loyalty_points >= 100 THEN 'silver' ELSE 'bronze' END AS tier FROM customers;",
+    "requires": [
+      "case",
+      "loyalty_points",
+      "tier"
+    ],
+    "hint": "Use searched CASE with conditions.",
+    "min_rows": 1
+  },
+  {
+    "id": 53,
+    "title": "Subquery above average",
+    "level": "intermediate",
+    "topic": "Subquery",
+    "story": "Find products priced above the average.",
+    "goal": "Show products where price is greater than the average price.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT * FROM products WHERE price > (SELECT AVG(price) FROM products);",
+    "requires": [
+      "select avg",
+      "where",
+      "("
+    ],
+    "hint": "A subquery can calculate the average.",
+    "min_rows": 1
+  },
+  {
+    "id": 54,
+    "title": "Subquery customers with orders",
+    "level": "intermediate",
+    "topic": "Subquery",
+    "story": "Find customers who appear in orders.",
+    "goal": "Show customers whose customer_id is in orders.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT * FROM customers WHERE customer_id IN (SELECT customer_id FROM orders);",
+    "requires": [
+      " in ",
+      "select customer_id from orders"
+    ],
+    "hint": "IN works well with subqueries.",
+    "min_rows": 1
+  },
+  {
+    "id": 55,
+    "title": "Exists open tickets",
+    "level": "intermediate",
+    "topic": "EXISTS",
+    "story": "Find customers with open support issues.",
+    "goal": "Show customers where an open ticket exists.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT * FROM customers c WHERE EXISTS (SELECT 1 FROM tickets t WHERE t.customer_id = c.customer_id AND t.status = 'open');",
+    "requires": [
+      "exists",
+      "select 1",
+      "status"
+    ],
+    "hint": "EXISTS checks for matching rows.",
+    "min_rows": 1
+  },
+  {
+    "id": 56,
+    "title": "CTE order totals",
+    "level": "intermediate",
+    "topic": "CTE",
+    "story": "Break a revenue query into readable parts.",
+    "goal": "Use a CTE to calculate order totals.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "WITH order_totals AS (SELECT orders.order_id, SUM(order_items.quantity * products.price) AS total FROM orders JOIN order_items ON orders.order_id = order_items.order_id JOIN products ON order_items.product_id = products.product_id GROUP BY orders.order_id) SELECT * FROM order_totals;",
+    "requires": [
+      "with",
+      " as ",
+      "group by"
+    ],
+    "hint": "WITH creates a temporary named result.",
+    "min_rows": 1
+  },
+  {
+    "id": 57,
+    "title": "CTE high value orders",
+    "level": "intermediate",
+    "topic": "CTE",
+    "story": "Filter calculated order totals cleanly.",
+    "goal": "Use a CTE and show orders with total above 100.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "WITH order_totals AS (SELECT orders.order_id, SUM(order_items.quantity * products.price) AS total FROM orders JOIN order_items ON orders.order_id = order_items.order_id JOIN products ON order_items.product_id = products.product_id GROUP BY orders.order_id) SELECT * FROM order_totals WHERE total > 100;",
+    "requires": [
+      "with",
+      "where",
+      "total >"
+    ],
+    "hint": "Filter the CTE in the outer query.",
+    "min_rows": 1
+  },
+  {
+    "id": 58,
+    "title": "Union city names",
+    "level": "intermediate",
+    "topic": "UNION",
+    "story": "Build one list of cities from students and customers.",
+    "goal": "Return unique cities from customers and students.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT city FROM customers UNION SELECT city FROM students;",
+    "requires": [
+      "union",
+      "city"
+    ],
+    "hint": "UNION removes duplicates.",
+    "min_rows": 1
+  },
+  {
+    "id": 59,
+    "title": "Union all city names",
+    "level": "intermediate",
+    "topic": "UNION ALL",
+    "story": "Keep every city record from both tables.",
+    "goal": "Return all city rows from customers and students using UNION ALL.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT city FROM customers UNION ALL SELECT city FROM students;",
+    "requires": [
+      "union all"
+    ],
+    "hint": "UNION ALL keeps duplicates.",
+    "min_rows": 1
+  },
+  {
+    "id": 60,
+    "title": "Enrollments with course names",
+    "level": "intermediate",
+    "topic": "JOIN",
+    "story": "Scores need course context.",
+    "goal": "Show student_id, course_name, and score.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT enrollments.student_id, courses.course_name, enrollments.score FROM enrollments JOIN courses ON enrollments.course_id = courses.course_id;",
+    "requires": [
+      "join",
+      "courses",
+      "score"
+    ],
+    "hint": "Join course_id.",
+    "min_rows": 1
+  },
+  {
+    "id": 61,
+    "title": "Student course report",
+    "level": "intermediate",
+    "topic": "JOIN",
+    "story": "Create a student learning report.",
+    "goal": "Show student names, course_name, and score.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT students.first_name, students.last_name, courses.course_name, enrollments.score FROM enrollments JOIN students ON enrollments.student_id = students.student_id JOIN courses ON enrollments.course_id = courses.course_id;",
+    "requires": [
+      "join",
+      "students",
+      "courses",
+      "score"
+    ],
+    "hint": "This requires two joins.",
+    "min_rows": 1
+  },
+  {
+    "id": 62,
+    "title": "Average score by subject",
+    "level": "intermediate",
+    "topic": "GROUP BY",
+    "story": "Compare course subjects by average score.",
+    "goal": "Return subject and average score.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT courses.subject, AVG(enrollments.score) AS avg_score FROM enrollments JOIN courses ON enrollments.course_id = courses.course_id GROUP BY courses.subject;",
+    "requires": [
+      "avg",
+      "group by",
+      "subject"
+    ],
+    "hint": "Group by subject.",
+    "min_rows": 1
+  },
+  {
+    "id": 63,
+    "title": "Completed rate by course",
+    "level": "intermediate",
+    "topic": "GROUP BY",
+    "story": "Measure course completion.",
+    "goal": "Return course_name and sum of completed records.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT courses.course_name, SUM(enrollments.completed) AS completions FROM enrollments JOIN courses ON enrollments.course_id = courses.course_id GROUP BY courses.course_id;",
+    "requires": [
+      "sum",
+      "completed",
+      "group by"
+    ],
+    "hint": "Because completed is 0 or 1, SUM counts completions.",
+    "min_rows": 1
+  },
+  {
+    "id": 64,
+    "title": "Conditional aggregation",
+    "level": "intermediate",
+    "topic": "CASE",
+    "story": "Count open and closed tickets in one row.",
+    "goal": "Return open_count and closed_count using SUM(CASE...).",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT SUM(CASE WHEN status = 'open' THEN 1 ELSE 0 END) AS open_count, SUM(CASE WHEN status = 'closed' THEN 1 ELSE 0 END) AS closed_count FROM tickets;",
+    "requires": [
+      "sum",
+      "case",
+      "open_count",
+      "closed_count"
+    ],
+    "hint": "SUM(CASE WHEN condition THEN 1 ELSE 0 END).",
+    "min_rows": 1
+  },
+  {
+    "id": 65,
+    "title": "Multiple joins with filters",
+    "level": "intermediate",
+    "topic": "JOIN WHERE",
+    "story": "Find shipped products only.",
+    "goal": "Show shipped order product names and quantities.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT orders.order_id, products.product_name, order_items.quantity FROM orders JOIN order_items ON orders.order_id = order_items.order_id JOIN products ON order_items.product_id = products.product_id WHERE orders.status = 'shipped';",
+    "requires": [
+      "join",
+      "where",
+      "shipped"
+    ],
+    "hint": "Filter after the joins.",
+    "min_rows": 1
+  },
+  {
+    "id": 66,
+    "title": "Top customers",
+    "level": "intermediate",
+    "topic": "ORDER LIMIT",
+    "story": "Find highest loyalty customers.",
+    "goal": "Show the top 3 customers by loyalty_points.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT first_name, last_name, loyalty_points FROM customers ORDER BY loyalty_points DESC LIMIT 3;",
+    "requires": [
+      "order by",
+      "desc",
+      "limit 3"
+    ],
+    "hint": "Sort first, then limit.",
+    "min_rows": 1
+  },
+  {
+    "id": 67,
+    "title": "Product inventory value by category",
+    "level": "intermediate",
+    "topic": "GROUP BY",
+    "story": "Inventory value should be grouped.",
+    "goal": "Return category and total price * stock.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT category, SUM(price * stock) AS inventory_value FROM products GROUP BY category;",
+    "requires": [
+      "sum",
+      "price",
+      "stock",
+      "group by"
+    ],
+    "hint": "Multiply before summing.",
+    "min_rows": 1
+  },
+  {
+    "id": 68,
+    "title": "Discounted line total",
+    "level": "intermediate",
+    "topic": "Expressions",
+    "story": "Discounts reduce line totals.",
+    "goal": "Show item_id and discounted total using quantity * price * (1 - discount).",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT order_items.item_id, order_items.quantity * products.price * (1 - order_items.discount) AS discounted_total FROM order_items JOIN products ON order_items.product_id = products.product_id;",
+    "requires": [
+      "discount",
+      "1 -",
+      "join"
+    ],
+    "hint": "Use parentheses around 1 - discount.",
+    "min_rows": 1
+  },
+  {
+    "id": 69,
+    "title": "Having revenue over 100",
+    "level": "intermediate",
+    "topic": "HAVING",
+    "story": "Filter customer revenue after grouping.",
+    "goal": "Return customers with revenue over 100.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT customers.customer_id, SUM(order_items.quantity * products.price) AS revenue FROM customers JOIN orders ON customers.customer_id = orders.customer_id JOIN order_items ON orders.order_id = order_items.order_id JOIN products ON order_items.product_id = products.product_id GROUP BY customers.customer_id HAVING revenue > 100;",
+    "requires": [
+      "having",
+      "sum",
+      "group by"
+    ],
+    "hint": "SQLite lets HAVING use the alias revenue.",
+    "min_rows": 1
+  },
+  {
+    "id": 70,
+    "title": "Null handling",
+    "level": "intermediate",
+    "topic": "COALESCE",
+    "story": "Replace missing end dates for reports.",
+    "goal": "Show project_name and COALESCE(end_date, 'Active') as status_date.",
+    "steps": [
+      "Identify which tables are needed.",
+      "Run the starter SQL.",
+      "Check joins, filters, grouping, or expressions.",
+      "Read any error message and fix one clause at a time."
+    ],
+    "starter_sql": "SELECT project_name, COALESCE(end_date, 'Active') AS status_date FROM projects;",
+    "requires": [
+      "coalesce",
+      "end_date"
+    ],
+    "hint": "COALESCE returns the first non-null value.",
+    "min_rows": 1
+  },
+  {
+    "id": 71,
+    "title": "Rank products by price",
+    "level": "advanced",
+    "topic": "Window Functions",
+    "story": "Advanced reports often rank rows without collapsing them.",
+    "goal": "Show product_name, category, price, and rank by price descending.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT product_name, category, price, RANK() OVER (ORDER BY price DESC) AS price_rank FROM products;",
+    "requires": [
+      "rank() over",
+      "order by",
+      "price_rank"
+    ],
+    "hint": "Window functions use OVER.",
+    "min_rows": 1
+  },
+  {
+    "id": 72,
+    "title": "Rank products within category",
+    "level": "advanced",
+    "topic": "Window Functions",
+    "story": "Rank products inside each category.",
+    "goal": "Use RANK partitioned by category ordered by price desc.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT product_name, category, price, RANK() OVER (PARTITION BY category ORDER BY price DESC) AS category_rank FROM products;",
+    "requires": [
+      "partition by",
+      "rank() over",
+      "category"
+    ],
+    "hint": "PARTITION BY restarts the rank per group.",
+    "min_rows": 1
+  },
+  {
+    "id": 73,
+    "title": "Running revenue by order",
+    "level": "advanced",
+    "topic": "Window Functions",
+    "story": "Show a running total across orders.",
+    "goal": "Calculate running revenue ordered by order_id.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "WITH order_totals AS (SELECT orders.order_id, SUM(order_items.quantity * products.price) AS total FROM orders JOIN order_items ON orders.order_id = order_items.order_id JOIN products ON order_items.product_id = products.product_id GROUP BY orders.order_id) SELECT order_id, total, SUM(total) OVER (ORDER BY order_id) AS running_total FROM order_totals;",
+    "requires": [
+      "sum(total) over",
+      "with",
+      "order by"
+    ],
+    "hint": "Window SUM creates running totals.",
+    "min_rows": 1
+  },
+  {
+    "id": 74,
+    "title": "Customer order sequence",
+    "level": "advanced",
+    "topic": "ROW_NUMBER",
+    "story": "Number every customer's orders.",
+    "goal": "Show customer_id, order_id, and row_number over each customer.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT customer_id, order_id, ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY order_date) AS order_number FROM orders;",
+    "requires": [
+      "row_number() over",
+      "partition by",
+      "order_date"
+    ],
+    "hint": "ROW_NUMBER assigns sequence numbers.",
+    "min_rows": 1
+  },
+  {
+    "id": 75,
+    "title": "Previous order date",
+    "level": "advanced",
+    "topic": "LAG",
+    "story": "Compare each order to the previous order.",
+    "goal": "Use LAG(order_date) over customer_id.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT customer_id, order_id, order_date, LAG(order_date) OVER (PARTITION BY customer_id ORDER BY order_date) AS previous_order_date FROM orders;",
+    "requires": [
+      "lag",
+      "over",
+      "partition by"
+    ],
+    "hint": "LAG looks backward in a window.",
+    "min_rows": 1
+  },
+  {
+    "id": 76,
+    "title": "Percent of category stock",
+    "level": "advanced",
+    "topic": "Window Functions",
+    "story": "Find each product's share of category stock.",
+    "goal": "Show product_name and stock divided by category stock total.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT product_name, category, stock, ROUND(1.0 * stock / SUM(stock) OVER (PARTITION BY category), 3) AS stock_share FROM products;",
+    "requires": [
+      "sum(stock) over",
+      "partition by",
+      "round"
+    ],
+    "hint": "1.0 forces decimal division.",
+    "min_rows": 1
+  },
+  {
+    "id": 77,
+    "title": "Dense salary rank",
+    "level": "advanced",
+    "topic": "DENSE_RANK",
+    "story": "Rank salaries without gaps.",
+    "goal": "Show employees with dense rank by salary descending.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT first_name, last_name, salary, DENSE_RANK() OVER (ORDER BY salary DESC) AS salary_rank FROM employees;",
+    "requires": [
+      "dense_rank() over",
+      "salary"
+    ],
+    "hint": "DENSE_RANK is similar to RANK but removes gaps.",
+    "min_rows": 1
+  },
+  {
+    "id": 78,
+    "title": "Department salary percentile",
+    "level": "advanced",
+    "topic": "NTILE",
+    "story": "Divide salaries into buckets.",
+    "goal": "Use NTILE(4) over salary descending.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT first_name, last_name, salary, NTILE(4) OVER (ORDER BY salary DESC) AS salary_quartile FROM employees;",
+    "requires": [
+      "ntile(4)",
+      "over"
+    ],
+    "hint": "NTILE creates buckets.",
+    "min_rows": 1
+  },
+  {
+    "id": 79,
+    "title": "CTE chain",
+    "level": "advanced",
+    "topic": "CTE",
+    "story": "Complex analysis can use multiple CTEs.",
+    "goal": "Use two CTEs to calculate shipped revenue by customer.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "WITH shipped_orders AS (SELECT * FROM orders WHERE status = 'shipped'), revenue AS (SELECT shipped_orders.customer_id, SUM(order_items.quantity * products.price) AS total FROM shipped_orders JOIN order_items ON shipped_orders.order_id = order_items.order_id JOIN products ON order_items.product_id = products.product_id GROUP BY shipped_orders.customer_id) SELECT * FROM revenue;",
+    "requires": [
+      "with",
+      "shipped_orders",
+      "revenue",
+      "group by"
+    ],
+    "hint": "Separate filtering and aggregation into named CTEs.",
+    "min_rows": 1
+  },
+  {
+    "id": 80,
+    "title": "Anti join",
+    "level": "advanced",
+    "topic": "LEFT JOIN",
+    "story": "Find products that have never appeared in order_items.",
+    "goal": "Use LEFT JOIN and IS NULL to find unordered products.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT products.* FROM products LEFT JOIN order_items ON products.product_id = order_items.product_id WHERE order_items.product_id IS NULL;",
+    "requires": [
+      "left join",
+      "is null",
+      "order_items"
+    ],
+    "hint": "This is called an anti join pattern.",
+    "min_rows": 1
+  },
+  {
+    "id": 81,
+    "title": "Correlated subquery",
+    "level": "advanced",
+    "topic": "Subquery",
+    "story": "Compare each employee to their department average.",
+    "goal": "Show employees earning more than their department average.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT * FROM employees e WHERE salary > (SELECT AVG(salary) FROM employees e2 WHERE e2.department_id = e.department_id);",
+    "requires": [
+      "select avg",
+      "where e2.department_id",
+      "e.department_id"
+    ],
+    "hint": "The inner query references the outer query.",
+    "min_rows": 1
+  },
+  {
+    "id": 82,
+    "title": "Recursive CTE sample",
+    "level": "advanced",
+    "topic": "Recursive CTE",
+    "story": "Generate numbers using SQL only.",
+    "goal": "Use a recursive CTE to produce numbers 1 through 5.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "WITH RECURSIVE nums(n) AS (SELECT 1 UNION ALL SELECT n + 1 FROM nums WHERE n < 5) SELECT * FROM nums;",
+    "requires": [
+      "with recursive",
+      "union all",
+      "n < 5"
+    ],
+    "hint": "Recursive CTEs need a starting query and recursive query.",
+    "min_rows": 1
+  },
+  {
+    "id": 83,
+    "title": "View-style CTE report",
+    "level": "advanced",
+    "topic": "Reporting",
+    "story": "Build a clean report output.",
+    "goal": "Use a CTE and return customer revenue sorted descending.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "WITH customer_revenue AS (SELECT customers.customer_id, customers.first_name, customers.last_name, SUM(order_items.quantity * products.price) AS revenue FROM customers JOIN orders ON customers.customer_id = orders.customer_id JOIN order_items ON orders.order_id = order_items.order_id JOIN products ON order_items.product_id = products.product_id GROUP BY customers.customer_id) SELECT * FROM customer_revenue ORDER BY revenue DESC;",
+    "requires": [
+      "with",
+      "customer_revenue",
+      "order by",
+      "desc"
+    ],
+    "hint": "A CTE can act like a temporary report table.",
+    "min_rows": 1
+  },
+  {
+    "id": 84,
+    "title": "Data cleaning trim",
+    "level": "advanced",
+    "topic": "Cleaning",
+    "story": "Imported text can have spaces.",
+    "goal": "Use TRIM on a text value or column alias.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT first_name, TRIM(last_name) AS clean_last_name FROM customers;",
+    "requires": [
+      "trim",
+      " as "
+    ],
+    "hint": "TRIM removes leading and trailing spaces.",
+    "min_rows": 1
+  },
+  {
+    "id": 85,
+    "title": "Data cleaning lower",
+    "level": "advanced",
+    "topic": "Cleaning",
+    "story": "Normalize text for matching.",
+    "goal": "Show customer emails style by lowercasing first and last names.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT LOWER(first_name || '.' || last_name || '@example.com') AS email FROM customers;",
+    "requires": [
+      "lower",
+      "||",
+      "email"
+    ],
+    "hint": "SQLite concatenates strings with ||.",
+    "min_rows": 1
+  },
+  {
+    "id": 86,
+    "title": "String length check",
+    "level": "advanced",
+    "topic": "Cleaning",
+    "story": "Validate text length.",
+    "goal": "Show product_name and LENGTH(product_name).",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT product_name, LENGTH(product_name) AS name_length FROM products;",
+    "requires": [
+      "length",
+      "name_length"
+    ],
+    "hint": "LENGTH counts characters.",
+    "min_rows": 1
+  },
+  {
+    "id": 87,
+    "title": "Bucket prices",
+    "level": "advanced",
+    "topic": "CASE",
+    "story": "Create price bands for analytics.",
+    "goal": "Classify products as low, medium, or high price.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT product_name, CASE WHEN price < 20 THEN 'low' WHEN price < 80 THEN 'medium' ELSE 'high' END AS price_band FROM products;",
+    "requires": [
+      "case",
+      "price_band",
+      "when"
+    ],
+    "hint": "CASE can create bins.",
+    "min_rows": 1
+  },
+  {
+    "id": 88,
+    "title": "Pivot-like status counts",
+    "level": "advanced",
+    "topic": "Conditional Aggregation",
+    "story": "Create dashboard counts across columns.",
+    "goal": "Count shipped, pending, and cancelled orders in one query.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT SUM(CASE WHEN status = 'shipped' THEN 1 ELSE 0 END) AS shipped, SUM(CASE WHEN status = 'pending' THEN 1 ELSE 0 END) AS pending, SUM(CASE WHEN status = 'cancelled' THEN 1 ELSE 0 END) AS cancelled FROM orders;",
+    "requires": [
+      "sum",
+      "case",
+      "shipped",
+      "pending",
+      "cancelled"
+    ],
+    "hint": "Conditional aggregation is a SQL dashboard superpower.",
+    "min_rows": 1
+  },
+  {
+    "id": 89,
+    "title": "Nested aggregation",
+    "level": "advanced",
+    "topic": "Subquery",
+    "story": "Find categories above the overall average category inventory value.",
+    "goal": "Use a subquery over grouped category inventory values.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "WITH category_values AS (SELECT category, SUM(price * stock) AS value FROM products GROUP BY category) SELECT * FROM category_values WHERE value > (SELECT AVG(value) FROM category_values);",
+    "requires": [
+      "with",
+      "avg(value)",
+      "group by"
+    ],
+    "hint": "CTEs make nested aggregation clearer.",
+    "min_rows": 1
+  },
+  {
+    "id": 90,
+    "title": "Date month grouping",
+    "level": "advanced",
+    "topic": "Dates",
+    "story": "Group orders by month.",
+    "goal": "Use substr(order_date,1,7) and count orders.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT substr(order_date, 1, 7) AS order_month, COUNT(*) AS total_orders FROM orders GROUP BY substr(order_date, 1, 7);",
+    "requires": [
+      "substr",
+      "group by",
+      "count"
+    ],
+    "hint": "YYYY-MM strings work well for month grouping.",
+    "min_rows": 1
+  },
+  {
+    "id": 91,
+    "title": "Open ticket aging",
+    "level": "advanced",
+    "topic": "Dates",
+    "story": "Estimate how long open tickets have been open.",
+    "goal": "Use julianday('2025-05-20') - julianday(opened_date) for open tickets.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT ticket_id, julianday('2025-05-20') - julianday(opened_date) AS age_days FROM tickets WHERE status = 'open';",
+    "requires": [
+      "julianday",
+      "status",
+      "open"
+    ],
+    "hint": "Use a fixed date for repeatable training data.",
+    "min_rows": 1
+  },
+  {
+    "id": 92,
+    "title": "Cross join scenario",
+    "level": "advanced",
+    "topic": "CROSS JOIN",
+    "story": "Generate product-course combinations for bundle ideas.",
+    "goal": "Use CROSS JOIN between products and courses with a small LIMIT.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT products.product_name, courses.course_name FROM products CROSS JOIN courses LIMIT 10;",
+    "requires": [
+      "cross join",
+      "limit"
+    ],
+    "hint": "CROSS JOIN creates every combination.",
+    "min_rows": 1
+  },
+  {
+    "id": 93,
+    "title": "Explain duplicate issue",
+    "level": "advanced",
+    "topic": "JOIN",
+    "story": "Bad joins create duplicate or inflated counts.",
+    "goal": "Join orders to order_items and count item rows by status.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT orders.status, COUNT(order_items.item_id) AS item_rows FROM orders JOIN order_items ON orders.order_id = order_items.order_id GROUP BY orders.status;",
+    "requires": [
+      "join",
+      "count",
+      "group by"
+    ],
+    "hint": "Counting joined rows counts items, not orders.",
+    "min_rows": 1
+  },
+  {
+    "id": 94,
+    "title": "Count distinct orders",
+    "level": "advanced",
+    "topic": "COUNT DISTINCT",
+    "story": "Fix inflated counts caused by joins.",
+    "goal": "Count distinct orders by status after joining order_items.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT orders.status, COUNT(DISTINCT orders.order_id) AS order_count FROM orders JOIN order_items ON orders.order_id = order_items.order_id GROUP BY orders.status;",
+    "requires": [
+      "count(distinct",
+      "group by",
+      "join"
+    ],
+    "hint": "COUNT(DISTINCT ...) avoids duplicated order counts.",
+    "min_rows": 1
+  },
+  {
+    "id": 95,
+    "title": "Multi-condition CASE",
+    "level": "advanced",
+    "topic": "CASE",
+    "story": "Build a simple risk flag for tickets.",
+    "goal": "Mark open high or critical tickets as urgent.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT ticket_id, CASE WHEN status = 'open' AND priority IN ('high','critical') THEN 'urgent' ELSE 'normal' END AS risk_flag FROM tickets;",
+    "requires": [
+      "case",
+      "priority in",
+      "and"
+    ],
+    "hint": "CASE can include AND and IN.",
+    "min_rows": 1
+  },
+  {
+    "id": 96,
+    "title": "Subquery in FROM",
+    "level": "advanced",
+    "topic": "Derived Table",
+    "story": "Treat a query result like a table.",
+    "goal": "Use a derived table to average order totals.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT AVG(total) AS average_order_total FROM (SELECT orders.order_id, SUM(order_items.quantity * products.price) AS total FROM orders JOIN order_items ON orders.order_id = order_items.order_id JOIN products ON order_items.product_id = products.product_id GROUP BY orders.order_id) totals;",
+    "requires": [
+      "from (",
+      "avg",
+      "group by"
+    ],
+    "hint": "Derived tables must have an alias.",
+    "min_rows": 1
+  },
+  {
+    "id": 97,
+    "title": "Window plus filter CTE",
+    "level": "advanced",
+    "topic": "Window Functions",
+    "story": "Find each category's most expensive product.",
+    "goal": "Use RANK in a CTE and filter rank = 1.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "WITH ranked AS (SELECT product_name, category, price, RANK() OVER (PARTITION BY category ORDER BY price DESC) AS rnk FROM products) SELECT * FROM ranked WHERE rnk = 1;",
+    "requires": [
+      "rank() over",
+      "partition by",
+      "where rnk = 1"
+    ],
+    "hint": "Window results are easiest to filter in a CTE.",
+    "min_rows": 1
+  },
+  {
+    "id": 98,
+    "title": "Salary difference from department avg",
+    "level": "advanced",
+    "topic": "Window Functions",
+    "story": "Compare employees to their team average.",
+    "goal": "Show salary minus department average using AVG OVER.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT first_name, last_name, salary, salary - AVG(salary) OVER (PARTITION BY department_id) AS diff_from_department_avg FROM employees;",
+    "requires": [
+      "avg(salary) over",
+      "partition by",
+      "diff_from_department_avg"
+    ],
+    "hint": "Window AVG keeps each employee row.",
+    "min_rows": 1
+  },
+  {
+    "id": 99,
+    "title": "Completion rate",
+    "level": "advanced",
+    "topic": "Analytics",
+    "story": "Calculate percent completion by subject.",
+    "goal": "Return subject and AVG(completed) as completion_rate.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT courses.subject, ROUND(AVG(enrollments.completed), 2) AS completion_rate FROM enrollments JOIN courses ON enrollments.course_id = courses.course_id GROUP BY courses.subject;",
+    "requires": [
+      "avg",
+      "completed",
+      "round",
+      "group by"
+    ],
+    "hint": "Averages of 0/1 values become rates.",
+    "min_rows": 1
+  },
+  {
+    "id": 100,
+    "title": "Final boss report",
+    "level": "advanced",
+    "topic": "Capstone",
+    "story": "Build a full business report with joins, grouping, sorting, and calculations.",
+    "goal": "Return customer name, order count, revenue, and tier, sorted by revenue descending.",
+    "steps": [
+      "Break the problem into smaller pieces.",
+      "Use aliases to keep SQL readable.",
+      "Run the query before checking the lesson.",
+      "When an error appears, inspect clause order and table references."
+    ],
+    "starter_sql": "SELECT customers.first_name || ' ' || customers.last_name AS customer_name, COUNT(DISTINCT orders.order_id) AS order_count, ROUND(SUM(order_items.quantity * products.price * (1 - order_items.discount)), 2) AS revenue, CASE WHEN SUM(order_items.quantity * products.price) >= 200 THEN 'gold' WHEN SUM(order_items.quantity * products.price) >= 100 THEN 'silver' ELSE 'bronze' END AS tier FROM customers JOIN orders ON customers.customer_id = orders.customer_id JOIN order_items ON orders.order_id = order_items.order_id JOIN products ON order_items.product_id = products.product_id GROUP BY customers.customer_id ORDER BY revenue DESC;",
+    "requires": [
+      "count(distinct",
+      "round",
+      "case",
+      "group by",
+      "order by"
+    ],
+    "hint": "Combine everything: joins, aggregates, CASE, and ordering.",
+    "min_rows": 1
+  }
+]
